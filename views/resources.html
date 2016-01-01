@@ -1,0 +1,49 @@
+<div>
+    <h3>Azure Resource Types</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <select class="form-control" ng-model="selectedItem" ng-options="item.name for item in resources"></select>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div ng-show="selectedItem" class="col-md-8 table-responsive" style="overflow: auto" >
+            <table class="table table-condensed">
+                <tbody>
+                    <tr>
+                        <td style="width: 140px">
+                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" title="Restrictions on the uniqueness of the resource name."></span>
+                            Uniqueness:
+                        </td>
+                        <td>{{selectedItem.uniqueness}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px">
+                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" title="Restrictions on the shape of the resource name."></span>
+                            Restrictions:
+                        </td>
+                        <td>{{selectedItem.restrictions}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px">
+                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" title="Time until the name is released for re-use after the resource is deleted."></span>
+                            Time to Release:
+                        </td>
+                        <td>{{selectedItem.timing}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px">
+                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" title="The URI associated with the resource."></span>
+                            Resource URI:
+                        </td>
+                        <td>{{selectedItem.uri}}</td>
+                    </tr>
+                    <tr ng-hide="selectedItem.notes == ''">
+                        <td style="width: 140px">Notes:</td>
+                        <td>{{selectedItem.notes}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
