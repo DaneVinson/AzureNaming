@@ -6,7 +6,7 @@ var jsonData =
     "timing": "Immediate across subscriptions",
     "restrictions": "2-? characters; Uppercase or lowercase letters, numbers and hyphens only; Must start and end with a letter or number",
     "uniqueness": "Must be Azure globally unique",
-    "uri": "http://{name}.cloudapp.net"
+    "uri": "{name}.cloudapp.net"
   },
   {
     "name": "Document DB Account",
